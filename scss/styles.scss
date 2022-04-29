@@ -1,4 +1,6 @@
 @import "variables";
+@import "extend";
+@import "mixin";
 
 * {
     margin:0;
@@ -52,8 +54,7 @@ a {
         justify-content: space-evenly;
 
         .nav-item {
-            padding-left: 2%;
-            padding-right: 2%;
+            @include paddingCostados(2%, 2%);
 
             &:hover {
                 font-weight: bolder;
@@ -71,8 +72,7 @@ a {
     padding: 2.5%;
 
     img {
-        display: block;
-        margin:0 auto;
+        @extend.imgFijo; 
         padding-top: 0.8%;
     }
 }
@@ -108,12 +108,9 @@ a {
 }
 
 .titulo {
-    text-align: center;
-    color: $color-titulo;
+    @extend.tituloFijo;
     background-color: $fondo-titulo;
-    font-weight: bolder;
     font-size: 200%;
-    font-family:'Birthstone';
 }
 
 @media (max-width: 1200px) {
@@ -184,8 +181,7 @@ a {
     text-align: $alineacion-centrada;
     line-height: 1.8;
     margin-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
+    @include paddingCostados(5%, 5%);
 }
 
 @media (max-width: 1024px) {
@@ -248,30 +244,26 @@ a {
         margin: 1%;
 
         .fotoIndex {
-            width: 270px;
-            height: 100%;
+            @include tamaño(270px, 100%);
         }
     }
 }
 
 @media (max-width: 1200px) {
     .flex-fotosIndex div {
-        margin-left: 6%;
-        margin-right: 6%;
+        @include marginCostados(6%, 6%);
     }
 }
 
 @media (max-width: 1024px) {
     .flex-fotosIndex div {
-        margin-left: 4%;
-        margin-right: 4%;
+        @include marginCostados(4%, 4%);
     }
 }
 
 @media (max-width: 768px) {
     .flex-fotosIndex div {
-        margin-left: 1.5%;
-        margin-right: 1.5%;
+        @include marginCostados(1.5%, 1.5%);
     }
 }
 
@@ -287,8 +279,7 @@ a {
     text-align: $alineacion-centrada;
 
     .logoInsta {
-        width: 3%;
-        height: 3%;
+        @include tamaño(3%, 3%);
         margin-bottom: 1%;
     }
 
@@ -365,14 +356,11 @@ a {
 }
 
 .tituloSesiones {
-    color: $color-titulo;
-    font-weight: bolder;
+    @extend.tituloFijo;
+    background-color: $fondo-titulo-sesiones;
     font-size: 370%;
-    font-family:'Birthstone';
     margin-top: 3%;
     margin-bottom: 3%;
-    text-align: $alineacion-centrada;
-    background-color: $fondo-titulo-sesiones; 
 }
 
 @media (max-width: 768px) {
@@ -439,8 +427,7 @@ a {
         }
 
         img {
-            display: block;
-            margin:0 auto;
+            @extend.imgFijo; 
             padding: 2%;
             width: 40%;
         }
@@ -449,8 +436,7 @@ a {
             text-align: $alineacion-centrada;
             line-height: 1.8;
             font-size: 110%;
-            padding-left: 15%;
-            padding-right: 15%;
+            @include paddingCostados(15%, 15%);
         }
     }
 }
@@ -494,8 +480,7 @@ a {
 @media (max-width: 600px) {
     .serviTF {
         font-size: 90%;
-        padding-left: 5%;
-        padding-right: 5%;
+        @include paddingCostados(5%, 5%);
     }
 }
 
@@ -515,8 +500,7 @@ a {
     text-align: center;
     line-height: 1.8;
     margin-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
+    @include paddingCostados(5%, 5%);
     font-size: 100%;
     background-color:rgb(183, 184, 183);
 }
@@ -651,22 +635,19 @@ a {
 
 @media (max-width: 1251px) {
     .cadaPorta {
-        margin-left: 0.3%;
-        margin-right: 0.3%;
+        @include marginCostados(0.3%, 0.3%);
     }
 }
 
 @media (max-width: 1180px) {
     .cadaPorta {
-        margin-left: 6%;
-        margin-right: 6%;
+        @include marginCostados(6%, 6%);
     }
 }
 
 @media (max-width: 857px) {
     .cadaPorta {
-        margin-left: 3%;
-        margin-right: 3%;
+        @include marginCostados(3%, 3%);
     }
 }
 
@@ -831,8 +812,7 @@ a {
     text-align: center;
     line-height: 1.8;
     margin-top: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
+    @include paddingCostados(5%, 5%);
 }
 
 @media (max-width: 768px) {
@@ -860,8 +840,7 @@ a {
 }
 
 .miFoto img{
-    display: block;
-    margin:0 auto; 
+    @extend.imgFijo; 
     width: 50%;
     padding: 3%;
 }
@@ -889,10 +868,8 @@ a {
     line-height: 1.8;
     margin-bottom: 3%;
     font-size: 125%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    @include paddingCostados(5%, 5%);
+    @include marginCostados(10%, 10%);
     
 }
 
@@ -910,16 +887,14 @@ a {
 
 @media (max-width: 600px) {
     .textoContacto {
-        margin-left: 5%;
-        margin-right: 5%;
+        @include marginCostados(5%, 5%);
         font-size: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .textoContacto {
-        margin-left: 2%;
-        margin-right: 2%;
+        @include marginCostados(2%, 2%);
         font-size: 90%;
     }
 }
@@ -935,8 +910,7 @@ a {
     flex-direction: column;
     width: auto;
     text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    @include marginCostados(30%, 30%);
     line-height: 1.8;
     border: 1px solid rgb(65, 64, 64);
     border-radius: 1;
@@ -993,27 +967,23 @@ a {
 }
 
 .logoCont {
-    width: 4%;
-    height: 4%;
+    @include tamaño(4%, 4%);
 }
 
 @media (max-width: 862px) {
     .logoCont {
-        width: 5%;
-        height: 5%;
+        @include tamaño(5%, 5%);
     }
 }
 
 @media (max-width: 600px) {
     .logoCont {
-        width: 6%;
-        height: 6%;
+        @include tamaño(6%, 6%);
     }
 }
 
 @media (max-width: 480px) {
     .logoCont {
-        width: 7%;
-        height: 7%;
+        @include tamaño(7%, 7%);
     }
 }

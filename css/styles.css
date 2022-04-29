@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.tituloFijo, .titulo, .tituloSesiones {
+  text-align: center;
+  color: #6c6e6c;
+  font-weight: bolder;
+  font-family: 'Birthstone'; }
+
+.imgFijo, .portada img, .servi .servicio img, .miFoto img {
+  display: block;
+  margin: 0 auto; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -50,8 +60,6 @@ a {
   background-color: #6cc48c;
   padding: 2.5%; }
   .portada img {
-    display: block;
-    margin: 0 auto;
     padding-top: 0.8%; }
 
 @media (max-width: 991px) {
@@ -75,12 +83,8 @@ a {
     width: 20%; } }
 
 .titulo {
-  text-align: center;
-  color: #6c6e6c;
   background-color: #e8ecec;
-  font-weight: bolder;
-  font-size: 200%;
-  font-family: 'Birthstone'; }
+  font-size: 200%; }
 
 @media (max-width: 1200px) {
   .titulo {
@@ -257,14 +261,10 @@ a {
   margin-top: 4%; }
 
 .tituloSesiones {
-  color: #6c6e6c;
-  font-weight: bolder;
+  background-color: rgba(108, 196, 140, 0.904);
   font-size: 370%;
-  font-family: 'Birthstone';
   margin-top: 3%;
-  margin-bottom: 3%;
-  text-align: center;
-  background-color: rgba(108, 196, 140, 0.904); }
+  margin-bottom: 3%; }
 
 @media (max-width: 768px) {
   .tituloSesiones {
@@ -311,8 +311,6 @@ a {
       font-size: 170%;
       margin-top: 1%; }
     .servi .servicio img {
-      display: block;
-      margin: 0 auto;
       padding: 2%;
       width: 40%; }
     .servi .servicio .serviTF {
@@ -606,8 +604,6 @@ a {
     font-size: 60%; } }
 
 .miFoto img {
-  display: block;
-  margin: 0 auto;
   width: 50%;
   padding: 3%; }
 

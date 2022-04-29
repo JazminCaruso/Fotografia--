@@ -1,0 +1,14 @@
+@mixin tamaño($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin paddingCostados($izq, $der) {
+    padding-left: $izq;
+    padding-right: $der;
+}
+
+@mixin marginCostados($izq, $der) {
+    margin-left: $izq;
+    margin-right: $der;
+}
