@@ -28,7 +28,7 @@ a {
 .grid-container {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -39,14 +39,14 @@ a {
 
 .grid-header { 
     grid-area: grid-header; 
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .navbar {
     background-color: rgb(232, 236, 236) !important;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-
+    
     .navbar-nav {
         width: 100%;
         justify-content: space-evenly;
@@ -353,6 +353,9 @@ a {
 
 .grid-header-secciones { 
     grid-area: grid-header-secciones; 
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .grid-footer-secciones { 
@@ -403,7 +406,7 @@ a {
 .grid-container-servicio {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -596,7 +599,7 @@ a {
 .grid-container-portafolio {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -709,7 +712,7 @@ a {
 .grid-container-portafolio-infantil {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -725,7 +728,7 @@ a {
 .grid-container-portafolio-maternal {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -741,7 +744,7 @@ a {
 .grid-container-portafolio-familiar {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -757,7 +760,7 @@ a {
 .grid-container-portafolio-boda {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -811,7 +814,7 @@ a {
 .grid-container-sobremi {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -868,7 +871,7 @@ a {
 .grid-container-contacto { 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
