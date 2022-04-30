@@ -1,6 +1,7 @@
 @import "variables";
 @import "extend";
 @import "mixin";
+@import "map";
 
 * {
     margin:0;
@@ -143,7 +144,7 @@ a {
 
 .subtitulo {
     padding: 4%;
-    text-align: $alineacion-centrada;
+    text-align: map-get($estiloTexto , alineacion);
     font-size: 180%;
 }
 
@@ -178,8 +179,8 @@ a {
 }
 
 .texto {
-    text-align: $alineacion-centrada;
-    line-height: 1.8;
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
     margin-top: 3%;
     @include paddingCostados(5%, 5%);
 }
@@ -209,11 +210,11 @@ a {
 }
 
 .titulitos {
-    font-size: larger;
-    font-weight: bold;
-    font-style: oblique;
     padding: 2%;
-    text-align: $alineacion-centrada;
+    font-size: map-get($estiloTexto, tamaño);
+    font-weight: map-get($estiloTexto, negrita);
+    font-style: map-get($estiloTexto, estilo);
+    text-align: map-get($estiloTexto, alineacion);
 }
 
 @media (max-width: 1024px) {
@@ -418,10 +419,10 @@ a {
         padding-bottom: 2%;
 
         .serviTitulo {
-            text-align: $alineacion-centrada;
+            text-align: map-get($estiloTexto , alineacion);
             color: $color-titulo;
             background-color: $fondo-titulo;
-            font-weight: bolder;
+            font-weight: map-get($estiloTexto , negrita);
             font-size: 170%;
             margin-top: 1%;
         }
@@ -497,8 +498,8 @@ a {
 }
 
 .textoServ {
-    text-align: center;
-    line-height: 1.8;
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
     margin-top: 3%;
     @include paddingCostados(5%, 5%);
     font-size: 100%;
@@ -524,8 +525,8 @@ a {
 }
 
 .textoG {
-    text-align: $alineacion-centrada;
-    line-height: 1.8;
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
     margin-top: 3%;
     margin-bottom: 3%;
     font-size: 125%;
@@ -620,9 +621,9 @@ a {
 }
 
 .portaTit {
-    text-align: center;
+    text-align: map-get($estiloTexto , alineacion);
     font-size: 130%;
-    font-style: italic;
+    font-style: map-get($estiloTexto , estilo);
 }
 
 .cadaPorta {
@@ -809,8 +810,8 @@ a {
 }
 
 .textoSobremi {
-    text-align: center;
-    line-height: 1.8;
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
     margin-top: 1%;
     @include paddingCostados(5%, 5%);
 }
@@ -864,8 +865,8 @@ a {
 }
   
 .textoContacto {
-    text-align: center;
-    line-height: 1.8;
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
     margin-bottom: 3%;
     font-size: 125%;
     @include paddingCostados(5%, 5%);

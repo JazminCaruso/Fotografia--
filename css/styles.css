@@ -154,10 +154,10 @@ a {
     font-size: 68%; } }
 
 .titulitos {
-  font-size: larger;
-  font-weight: bold;
-  font-style: oblique;
   padding: 2%;
+  font-size: larger;
+  font-weight: bolder;
+  font-style: italic;
   text-align: center; }
 
 @media (max-width: 1024px) {
