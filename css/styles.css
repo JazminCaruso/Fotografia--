@@ -32,7 +32,7 @@ a {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.01fr 1fr 0.1fr;
+  grid-template-rows: 0.01fr 1fr 0.01fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "grid-header" "grid-main" "grid-footer"; }
@@ -421,7 +421,7 @@ a {
 .grid-container-portafolio {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.01fr 1fr 0.1fr;
+  grid-template-rows: 0.01fr 1fr 0.01fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "grid-header-secciones" "grid-main-portafolio" "grid-footer-secciones"; }
@@ -442,10 +442,6 @@ a {
   .portafolio {
     margin-top: -18%; } }
 
-.fotoPort {
-  display: inline-block;
-  height: 400px; }
-
 .portaTit {
   text-align: center;
   font-size: 130%;
@@ -458,46 +454,31 @@ a {
   padding: 1%;
   position: relative; }
 
-@media (max-width: 1251px) {
+@media (max-width: 1230px) {
   .cadaPorta {
-    margin-left: 0.3%;
-    margin-right: 0.3%; } }
+    margin-left: 7%;
+    margin-right: 7%; } }
 
-@media (max-width: 1180px) {
+@media (max-width: 1200px) {
   .cadaPorta {
-    margin-left: 6%;
-    margin-right: 6%; } }
+    margin-left: 5%;
+    margin-right: 5%; } }
 
-@media (max-width: 857px) {
+@media (max-width: 895px) {
   .cadaPorta {
-    margin-left: 3%;
-    margin-right: 3%; } }
-
-@media (max-width: 768px) {
-  .cadaPorta {
-    margin-top: 6%; } }
+    margin-left: 1%;
+    margin-right: 1%; } }
 
 @media (max-width: 600px) {
   .cadaPorta {
-    margin-top: 8%;
-    margin-bottom: 2%; } }
-
-@media (max-width: 480px) {
-  .cadaPorta {
-    margin-top: -2%;
-    margin-bottom: 10%; } }
-
-@media (max-width: 320px) {
-  .cadaPorta {
-    margin-top: 4%;
-    margin-bottom: 4%; } }
+    margin-top: 6%; } }
 
 .cadaPorta:hover {
   transform: scale(1.2, 1.2); }
 
-@media (max-width: 320px) {
+@media (max-width: 1200px) {
   .cadaPorta:hover {
-    transform: scale(1.1, 1.1); } }
+    transform: scale(1.01, 1.01); } }
 
 .grid-container-portafolio-infantil {
   display: grid;
@@ -547,9 +528,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-
-.foto {
-  padding: 0.5%; }
+  .fotosSesion .foto {
+    padding: 0.5%; }
 
 .tamañoFV {
   width: 30%; }
@@ -687,14 +667,12 @@ a {
   padding-top: 3%;
   padding-bottom: 3%;
   width: auto; }
-
-.textoForm {
-  margin-top: 1%;
-  font-size: 110%; }
-
-.textarea {
-  vertical-align: center;
-  width: 98%; }
+  .formulario2 .textoForm {
+    margin-top: 1%;
+    font-size: 110%; }
+  .formulario2 .textarea {
+    vertical-align: center;
+    width: 98%; }
 
 .botones {
   background-color: grey; }

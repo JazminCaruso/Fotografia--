@@ -31,7 +31,7 @@ a {
 .grid-container {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.01fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.01fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -577,14 +577,12 @@ a {
     }
 }
 
-// ------------------a partir de acá es solo css------------------
-
 // ------------------estilo portafolio------------------
 
 .grid-container-portafolio {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.01fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.01fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -615,11 +613,6 @@ a {
     }
 }
 
-.fotoPort {
-    display: inline-block;
-    height: 400px;
-}
-
 .portaTit {
     text-align: map-get($estiloTexto , alineacion);
     font-size: 130%;
@@ -634,48 +627,27 @@ a {
     position: relative;
 }
 
-@media (max-width: 1251px) {
+@media (max-width: 1230px) {
     .cadaPorta {
-        @include marginCostados(0.3%, 0.3%);
+        @include marginCostados(7%, 7%);
     }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1200px) {
     .cadaPorta {
-        @include marginCostados(6%, 6%);
+        @include marginCostados(5%, 5%);
     }
 }
 
-@media (max-width: 857px) {
+@media (max-width: 895px) {
     .cadaPorta {
-        @include marginCostados(3%, 3%);
-    }
-}
-
-@media (max-width: 768px) {
-    .cadaPorta {
-        margin-top: 6%;
+        @include marginCostados(1%, 1%);
     }
 }
 
 @media (max-width: 600px) {
     .cadaPorta {
-        margin-top: 8%;
-        margin-bottom: 2%;
-    }
-}
-
-@media (max-width: 480px) {
-    .cadaPorta {
-        margin-top: -2%;
-        margin-bottom: 10%;
-    }
-}
-
-@media (max-width: 320px) {
-    .cadaPorta {
-        margin-top: 4%;
-        margin-bottom: 4%;
+        margin-top: 6%;
     }
 }
 
@@ -683,9 +655,9 @@ a {
     transform: scale(1.2, 1.2);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 1200px) {
     .cadaPorta:hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(1.01, 1.01);
     }
 }
 
@@ -759,12 +731,12 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    .foto {
+        padding: 0.5%;
+    }
 }
 
-.foto {
-    padding: 0.5%;
-}
- 
 .tamañoFV {
     width: 30%;
 }
@@ -949,18 +921,16 @@ a {
     padding-top: 3%;
     padding-bottom: 3%;
     width: auto;
-}
 
-.textoForm {
-    margin-top: 1%;
-    font-size: 110%;
-}
+    .textoForm {
+        margin-top: 1%;
+        font-size: 110%;
+    }
 
-
-
-.textarea {
-    vertical-align: center;
-    width: 98%;
+    .textarea {
+        vertical-align: center;
+        width: 98%;
+    }
 }
 
 .botones {
