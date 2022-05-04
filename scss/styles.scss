@@ -74,37 +74,13 @@ a {
 
     img {
         @extend.imgFijo; 
-        padding-top: 0.8%;
+        @include tamaño(auto, auto);
     }
 }
 
-@media (max-width: 991px) {
-    .portada {
-        padding-top: 4%;
-    }
-}
-
-@media (max-width: 793px) {
-    .portada {
-        padding-top: 5%;
-    }
-}
-
-@media (max-width: 594px) {
-    .portada {
-        padding-top: 6%;
-    }
-}
-
-@media (max-width: 416px) {
-    .portada {
-        padding-top: 8%;
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .portada img {
-        width: 20%;
+        @include tamaño(20%, auto);
     }
 }
 
@@ -176,6 +152,10 @@ a {
     .subtitulo{
         font-size: 70%;
     }
+}
+
+.fotoCarrusel {
+    @include tamaño(auto, auto);
 }
 
 .texto {
@@ -277,22 +257,8 @@ a {
 
 .insta {
     padding: 2%;
+    font-size: 90%;
     text-align: $alineacion-centrada;
-
-    .logoInsta {
-        @include tamaño(3%, 3%);
-        margin-bottom: 1%;
-    }
-
-    h5 {
-        font-size: 85%;
-    }
-}
-
-@media (max-width: 768px) {
-    .insta{
-        font-size: 90%;
-    }
 }
 
 @media (max-width: 600px) {
@@ -313,8 +279,31 @@ a {
     }
 }
 
+.logoInsta {
+    @include tamaño(3%, 3%);
+    margin-bottom: 1%;
+}
+
+@media (max-width: 862px) {
+    .logoInsta {
+        @include tamaño(4%, 4%);
+    }
+}
+
+@media (max-width: 600px) {
+    .logoInsta {
+        @include tamaño(5%, 5%);
+    }
+}
+
+@media (max-width: 480px) {
+    .logoInsta {
+        @include tamaño(6%, 6%);
+    }
+}
+
 .datos {
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 @media (max-width: 768px) {
@@ -395,7 +384,7 @@ a {
 .grid-container-servicio {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.01fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.01fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -418,34 +407,21 @@ a {
         margin:0 auto;
         padding-bottom: 2%;
 
-        .serviTitulo {
-            text-align: map-get($estiloTexto , alineacion);
-            color: $color-titulo;
-            background-color: $fondo-titulo;
-            font-weight: map-get($estiloTexto , negrita);
-            font-size: 170%;
-            margin-top: 1%;
-        }
-
         img {
             @extend.imgFijo; 
+            @include tamaño(40%, auto);
             padding: 2%;
-            width: 40%;
-        }
-
-        .serviTF {
-            text-align: $alineacion-centrada;
-            line-height: 1.8;
-            font-size: 110%;
-            @include paddingCostados(15%, 15%);
         }
     }
 }
 
-@media (max-width: 480px) {
-    .servicio {
-        padding-top: 2%;
-    }
+.serviTitulo {
+    text-align: map-get($estiloTexto , alineacion);
+    color: $color-titulo;
+    background-color: $fondo-titulo;
+    font-weight: map-get($estiloTexto , negrita);
+    font-size: 170%;
+    margin-top: 1%;
 }
 
 @media (max-width: 768px) {
@@ -472,6 +448,13 @@ a {
     }
 }
 
+.serviTF {
+    text-align: $alineacion-centrada;
+    line-height: 1.8;
+    font-size: 110%;
+    @include paddingCostados(15%, 15%);
+}
+
 @media (max-width: 768px) {
     .serviTF {
         font-size: 100%;
@@ -480,20 +463,20 @@ a {
 
 @media (max-width: 600px) {
     .serviTF {
-        font-size: 90%;
+        font-size: 95%;
         @include paddingCostados(5%, 5%);
     }
 }
 
 @media (max-width: 480px) {
     .serviTF {
-        font-size: 80%;
+        font-size: 90%;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .serviTF {
-        font-size: 70%;
+        font-size: 80%;
     }
 }
 
@@ -514,13 +497,13 @@ a {
 
 @media (max-width: 480px) {
     .textoServ {
-        font-size: 70%;
+        font-size: 85%;
     }
 }
 
 @media (max-width: 320px) {
     .textoServ {
-        font-size: 65%;
+        font-size: 77%;
     }
 }
 
@@ -577,6 +560,32 @@ a {
     }
 }
 
+.textoS {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-top: 3%;
+    @include paddingCostados(5%, 5%);
+    font-size: 100%;
+}
+
+@media (max-width: 768px) {
+    .textoS {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoS {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 320px) {
+    .textoS {
+        font-size: 77%;
+    }
+}
+
 // ------------------estilo portafolio------------------
 
 .grid-container-portafolio {  
@@ -625,6 +634,10 @@ a {
     background-color: rgb(232, 236, 236);
     padding: 1%;
     position: relative;
+
+    img {
+        @include tamaño(100%, auto);
+    }
 }
 
 @media (max-width: 1230px) {
@@ -732,34 +745,34 @@ a {
     flex-wrap: wrap;
     justify-content: center;
 
-    .foto {
+    img {
         padding: 0.5%;
     }
 }
 
 .tamañoFV {
-    width: 30%;
+    @include tamaño(30%, auto);
 }
 
 @media (max-width: 480px) {
     .tamañoFV {
-        width: 44%;
+        @include tamaño(44%, auto);
     }
 }
 
 .tamañoFH {
-    width: 65%;
+    @include tamaño(65%, auto);
 }
 
 @media (max-width: 600px) {
     .tamañoFH {
-        width: 92%;
+        @include tamaño(90%, auto);
     }
 }
 
 @media (max-width: 480px) {
     .tamañoFH {
-        width: 89%;
+        @include tamaño(88%, auto);
     }
 }
 
@@ -882,8 +895,8 @@ a {
     display: flex;
     flex-direction: column;
     width: auto;
-    text-align: center;
-    @include marginCostados(30%, 30%);
+    text-align: $alineacion-centrada;
+    @include marginCostados(20%, 20%);
     line-height: 1.8;
     border: 1px solid rgb(65, 64, 64);
     border-radius: 1;
@@ -891,15 +904,10 @@ a {
     background-color: rgb(203, 204, 203);
 }
 
-@media (max-width: 768px) {
-    .formulario {
-        font-size: 90%;
-    }
-}
-
 @media (max-width: 600px) {
     .formulario {
         font-size: 85%;
+        @include marginCostados(10%, 10%);
     }
 }
 
