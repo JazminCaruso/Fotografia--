@@ -64,3 +64,4 @@ Description: Fotografía de pre y post boda. Diversión, complicidad y originali
 Title: Noe Rojo Fotografía - Pre/Post boda
 h1: Fotografía Pre/Post boda
 
+Las imágenes de todas las secciones tienen alt.
