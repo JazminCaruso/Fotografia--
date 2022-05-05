@@ -409,7 +409,7 @@ a {
 
         img {
             @extend.imgFijo; 
-            @include tamaño(40%, auto);
+            @include tamaño(48%, auto);
             padding: 2%;
         }
     }
