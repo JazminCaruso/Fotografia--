@@ -43,7 +43,8 @@ a {
       .navbar .navbar-nav .nav-item:hover {
         font-weight: bolder; }
       .navbar .navbar-nav .nav-item .dropdown-menu {
-        background-color: rgba(216, 216, 216, 0.788); }
+        background-color: rgba(216, 216, 216, 0.788);
+        outline: none; }
         .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
           background: rgba(181, 182, 181, 0.788); }
         .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:focus {
