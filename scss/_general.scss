@@ -1,0 +1,142 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(44, 39, 39);
+
+    &:hover {
+        text-decoration: none;
+        color: rgb(0,0,0);
+    }
+}
+
+.letra {
+    font-family:'Montserrat';
+}
+
+.imagenFondoN {
+    background-image: url("../img/fondoN.jpg");
+    background-repeat:repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.imagenFondoG {
+    background-image: linear-gradient(to bottom, #e8ecec, #6cc48c, #e8ecec);
+}
+
+// -------------------- navbar ------------------
+
+.navbar {
+    background-color: rgb(232, 236, 236) !important;
+    
+    .navbar-nav {
+        width: 100%;
+        justify-content: space-evenly;
+
+        .nav-item {
+            @include paddingCostados(2%, 2%);
+
+            &:hover {
+                font-weight: bolder;
+            }
+
+            .dropdown-menu {
+                background-color: rgba(216, 216, 216, 0.788);
+
+                .dropdown-item {
+
+                    &:hover {
+                        background: rgba(181, 182, 181, 0.788);
+                    }
+
+                    &:focus {
+                        background: rgba(181, 182, 181, 0.788);
+                        color: rgb(0,0,0);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+// -------------------- pie de página ------------------
+
+.insta {
+    padding: 2%;
+    font-size: 90%;
+    text-align: $alineacion-centrada;
+}
+
+@media (max-width: 600px) {
+    .insta{
+        font-size: 83%;
+    }
+}
+
+@media (max-width: 480px) {
+    .insta{
+        font-size: 78%;
+    }
+}
+
+@media (max-width: 320px) {
+    .insta{
+        font-size: 70%;
+    }
+}
+
+.logoInsta {
+    @include tamaño(3%, 3%);
+    margin-bottom: 1%;
+}
+
+@media (max-width: 862px) {
+    .logoInsta {
+        @include tamaño(4%, 4%);
+    }
+}
+
+@media (max-width: 600px) {
+    .logoInsta {
+        @include tamaño(5%, 5%);
+    }
+}
+
+@media (max-width: 480px) {
+    .logoInsta {
+        @include tamaño(6%, 6%);
+    }
+}
+
+.datos {
+    margin-left: 2%;
+}
+
+@media (max-width: 768px) {
+    .datos{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .datos{
+        font-size: 73%;
+    }
+}
+
+@media (max-width: 480px) {
+    .datos{
+        font-size: 68%;
+    }
+}
+
+@media (max-width: 320px) {
+    .datos{
+        font-size: 60%;
+    }
+}

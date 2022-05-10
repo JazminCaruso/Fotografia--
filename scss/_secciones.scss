@@ -1,0 +1,46 @@
+.grid-header-secciones { 
+    grid-area: grid-header-secciones; 
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.grid-footer-secciones { 
+    grid-area: grid-footer-secciones; 
+    background-color: $color-piedepag;
+    margin-top: 4%;
+}
+
+.tituloSesiones {
+    @extend.tituloFijo;
+    background-color: $fondo-titulo-sesiones;
+    font-size: 370%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+@media (max-width: 768px) {
+    .tituloSesiones {
+        font-size: 320%;
+    }
+}
+
+@media (max-width: 600px) {
+    .tituloSesiones {
+        font-size: 300%;
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloSesiones {
+        font-size: 280%;
+        margin-top: 7%;
+    }
+}
+
+@media (max-width: 320px) {
+    .tituloSesiones {
+        font-size: 240%;
+    }
+}

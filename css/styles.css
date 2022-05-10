@@ -16,6 +16,9 @@
 a {
   text-decoration: none;
   color: #2c2727; }
+  a:hover {
+    text-decoration: none;
+    color: black; }
 
 .letra {
   font-family: 'Montserrat'; }
@@ -28,6 +31,80 @@ a {
 
 .imagenFondoG {
   background-image: linear-gradient(to bottom, #e8ecec, #6cc48c, #e8ecec); }
+
+.navbar {
+  background-color: #e8ecec !important; }
+  .navbar .navbar-nav {
+    width: 100%;
+    justify-content: space-evenly; }
+    .navbar .navbar-nav .nav-item {
+      padding-left: 2%;
+      padding-right: 2%; }
+      .navbar .navbar-nav .nav-item:hover {
+        font-weight: bolder; }
+      .navbar .navbar-nav .nav-item .dropdown-menu {
+        background-color: rgba(216, 216, 216, 0.788); }
+        .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+          background: rgba(181, 182, 181, 0.788); }
+        .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:focus {
+          background: rgba(181, 182, 181, 0.788);
+          color: black; }
+
+.insta {
+  padding: 2%;
+  font-size: 90%;
+  text-align: center; }
+
+@media (max-width: 600px) {
+  .insta {
+    font-size: 83%; } }
+
+@media (max-width: 480px) {
+  .insta {
+    font-size: 78%; } }
+
+@media (max-width: 320px) {
+  .insta {
+    font-size: 70%; } }
+
+.logoInsta {
+  width: 3%;
+  height: 3%;
+  margin-bottom: 1%; }
+
+@media (max-width: 862px) {
+  .logoInsta {
+    width: 4%;
+    height: 4%; } }
+
+@media (max-width: 600px) {
+  .logoInsta {
+    width: 5%;
+    height: 5%; } }
+
+@media (max-width: 480px) {
+  .logoInsta {
+    width: 6%;
+    height: 6%; } }
+
+.datos {
+  margin-left: 2%; }
+
+@media (max-width: 768px) {
+  .datos {
+    font-size: 80%; } }
+
+@media (max-width: 600px) {
+  .datos {
+    font-size: 73%; } }
+
+@media (max-width: 480px) {
+  .datos {
+    font-size: 68%; } }
+
+@media (max-width: 320px) {
+  .datos {
+    font-size: 60%; } }
 
 .grid-container {
   display: grid;
@@ -42,19 +119,6 @@ a {
   position: sticky;
   top: 0px;
   z-index: 1; }
-
-.navbar {
-  background-color: #e8ecec !important; }
-  .navbar .navbar-nav {
-    width: 100%;
-    justify-content: space-evenly; }
-    .navbar .navbar-nav .nav-item {
-      padding-left: 2%;
-      padding-right: 2%; }
-      .navbar .navbar-nav .nav-item:hover {
-        font-weight: bolder; }
-      .navbar .navbar-nav .nav-item .dropdown-menu {
-        background-color: rgba(216, 216, 216, 0.788); }
 
 .portada {
   background-color: #6cc48c;
@@ -194,62 +258,6 @@ a {
   margin-top: 4%;
   padding-bottom: 1%; }
 
-.insta {
-  padding: 2%;
-  font-size: 90%;
-  text-align: center; }
-
-@media (max-width: 600px) {
-  .insta {
-    font-size: 83%; } }
-
-@media (max-width: 480px) {
-  .insta {
-    font-size: 78%; } }
-
-@media (max-width: 320px) {
-  .insta {
-    font-size: 70%; } }
-
-.logoInsta {
-  width: 3%;
-  height: 3%;
-  margin-bottom: 1%; }
-
-@media (max-width: 862px) {
-  .logoInsta {
-    width: 4%;
-    height: 4%; } }
-
-@media (max-width: 600px) {
-  .logoInsta {
-    width: 5%;
-    height: 5%; } }
-
-@media (max-width: 480px) {
-  .logoInsta {
-    width: 6%;
-    height: 6%; } }
-
-.datos {
-  margin-left: 2%; }
-
-@media (max-width: 768px) {
-  .datos {
-    font-size: 80%; } }
-
-@media (max-width: 600px) {
-  .datos {
-    font-size: 73%; } }
-
-@media (max-width: 480px) {
-  .datos {
-    font-size: 68%; } }
-
-@media (max-width: 320px) {
-  .datos {
-    font-size: 60%; } }
-
 .grid-header-secciones {
   grid-area: grid-header-secciones;
   position: sticky;
@@ -305,9 +313,13 @@ a {
     margin: 0 auto;
     padding-bottom: 2%; }
     .servi .servicio img {
-      width: 48%;
+      width: auto;
       height: auto;
       padding: 2%; }
+    @media (max-width: 600px) {
+      .servi .servicio img {
+        width: 60%;
+        height: auto; } }
 
 .serviTitulo {
   text-align: center;
@@ -438,6 +450,20 @@ a {
   .textoS {
     font-size: 77%; } }
 
+.up {
+  margin-left: 90%;
+  text-align: end;
+  display: block;
+  color: black;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center; }
+
+@media (max-width: 600px) {
+  .up {
+    margin-left: 80%; } }
+
 .grid-container-portafolio {
   display: grid;
   grid-template-columns: 1fr;
@@ -457,10 +483,6 @@ a {
 @media (max-width: 600px) {
   .portafolio {
     margin-top: -4%; } }
-
-@media (max-width: 320px) {
-  .portafolio {
-    margin-top: -18%; } }
 
 .portaTit {
   text-align: center;
@@ -551,31 +573,26 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-  .fotosSesion img {
+  .fotosSesion .tamañoFV {
+    width: 30%;
+    height: auto;
     padding: 0.5%; }
-
-.tamañoFV {
-  width: 30%;
-  height: auto; }
-
-@media (max-width: 480px) {
-  .tamañoFV {
-    width: 44%;
-    height: auto; } }
-
-.tamañoFH {
-  width: 65%;
-  height: auto; }
-
-@media (max-width: 600px) {
-  .tamañoFH {
-    width: 90%;
-    height: auto; } }
-
-@media (max-width: 480px) {
-  .tamañoFH {
-    width: 88%;
-    height: auto; } }
+  @media (max-width: 480px) {
+    .fotosSesion .tamañoFV {
+      width: 44%;
+      height: auto; } }
+  .fotosSesion .tamañoFH {
+    width: 65%;
+    height: auto;
+    padding: 0.5%; }
+  @media (max-width: 600px) {
+    .fotosSesion .tamañoFH {
+      width: 90%;
+      height: auto; } }
+  @media (max-width: 480px) {
+    .fotosSesion .tamañoFH {
+      width: 88%;
+      height: auto; } }
 
 .grid-container-sobremi {
   display: grid;
@@ -668,10 +685,10 @@ a {
   margin-left: 20%;
   margin-right: 20%;
   line-height: 1.8;
-  border: 1px solid #414040;
+  border: none;
   border-radius: 1;
   -webkit-appearance: none;
-  background-color: #cbcccb; }
+  background-color: #e6ebe6; }
 
 @media (max-width: 600px) {
   .formulario {
@@ -681,9 +698,15 @@ a {
 
 .formulario1 {
   padding-top: 3%; }
-
-.formulario1 input {
-  width: 90%; }
+  .formulario1 input {
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #414040;
+    background-color: #e6ebe6;
+    color: black; }
+  .formulario1 label {
+    visibility: hidden; }
 
 @media (max-width: 600px) {
   .formulario1 input {
@@ -695,13 +718,25 @@ a {
   width: auto; }
   .formulario2 .textoForm {
     margin-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-size: 110%; }
   .formulario2 .textarea {
     vertical-align: center;
-    width: 98%; }
+    width: 90%;
+    border: none;
+    padding-left: 3%;
+    outline: none; }
 
-.botones {
-  background-color: grey; }
+.boton {
+  background-color: #e6ebe6;
+  margin-bottom: 4%; }
+  .boton input {
+    background-color: #959694;
+    padding-left: 8%;
+    padding-right: 8%;
+    border: none;
+    border-radius: .5em; }
 
 .logoCont {
   width: 4%;

@@ -1,0 +1,205 @@
+.grid-container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.01fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header"
+      "grid-main"
+      "grid-footer";
+}
+
+.grid-header { 
+    grid-area: grid-header; 
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.portada {
+    background-color: $color-portada; 
+    padding: 2.5%;
+
+    img {
+        @extend.imgFijo; 
+        @include tamaño(auto, auto);
+    }
+}
+
+@media (max-width: 600px) {
+    .portada img {
+        @include tamaño(20%, auto);
+    }
+}
+
+.titulo {
+    @extend.tituloFijo;
+    background-color: $fondo-titulo;
+    font-size: 200%;
+}
+
+@media (max-width: 1200px) {
+    .titulo{
+        font-size: 190%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo{
+        font-size: 175%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo{
+        font-size: 160%;
+    }
+}
+
+@media (max-width: 320px) {
+    .titulo{
+        font-size: 138%;
+    }
+}
+
+.grid-main { 
+    grid-area: grid-main; 
+}
+
+.subtitulo {
+    padding: 4%;
+    text-align: map-get($estiloTexto , alineacion);
+    font-size: 180%;
+}
+
+@media (max-width: 1024px) {
+    .subtitulo{
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 768px) {
+    .subtitulo{
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .subtitulo{
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .subtitulo{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .subtitulo{
+        font-size: 70%;
+    }
+}
+
+.fotoCarrusel {
+    @include tamaño(auto, auto);
+}
+
+.texto {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-top: 3%;
+    @include paddingCostados(5%, 5%);
+}
+
+@media (max-width: 1024px) {
+    .texto{
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto{
+        font-size: 73%;
+    }
+}
+
+@media (max-width: 320px) {
+    .texto{
+        font-size: 68%;
+    }
+}
+
+.titulitos {
+    padding: 2%;
+    font-size: map-get($estiloTexto, tamaño);
+    font-weight: map-get($estiloTexto, negrita);
+    font-style: map-get($estiloTexto, estilo);
+    text-align: map-get($estiloTexto, alineacion);
+}
+
+@media (max-width: 1024px) {
+    .titulitos{
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulitos{
+        font-size: 110%;
+    }
+}
+
+@media (max-width: 320px) {
+    .titulitos{
+        font-size: 105%;
+    }
+}
+
+.flex-fotosIndex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    div {
+        margin: 1%;
+
+        .fotoIndex {
+            @include tamaño(270px, 100%);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .flex-fotosIndex div {
+        @include marginCostados(6%, 6%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .flex-fotosIndex div {
+        @include marginCostados(4%, 4%);
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-fotosIndex div {
+        @include marginCostados(1.5%, 1.5%);
+    }
+}
+
+.grid-footer { 
+    grid-area: grid-footer; 
+    background-color: $color-piedepag;
+    margin-top: 4%;
+    padding-bottom: 1%;
+}

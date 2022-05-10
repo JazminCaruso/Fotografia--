@@ -1,0 +1,52 @@
+.grid-container-sobremi {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-sobremi"
+      "grid-footer-secciones";
+}
+  
+.grid-main-sobremi { 
+    grid-area: grid-main-sobremi; 
+}
+
+.textoSobremi {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-top: 1%;
+    @include paddingCostados(5%, 5%);
+}
+
+@media (max-width: 768px) {
+    .textoSobremi {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .textoSobremi {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoSobremi {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 320px) {
+    .textoSobremi {
+        font-size: 60%;
+    }
+}
+
+.miFoto img{
+    @extend.imgFijo; 
+    width: 50%;
+    padding: 3%;
+}

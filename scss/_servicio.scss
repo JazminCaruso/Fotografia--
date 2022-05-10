@@ -1,0 +1,228 @@
+.grid-container-servicio {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.01fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-servicio"
+      "grid-footer-secciones";
+}
+  
+.grid-main-servicio { 
+    grid-area: grid-main-servicio; 
+}
+
+.servi {
+    margin-top: -3%;
+
+    .servicio {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:0 auto;
+        padding-bottom: 2%;
+
+        img {
+            @extend.imgFijo; 
+            @include tamaño(auto, auto);
+            padding: 2%;
+        }
+
+        @media (max-width: 600px) {
+            img {
+               @include tamaño(60%, auto);
+            }
+       }
+
+    }
+}
+
+.serviTitulo {
+    text-align: map-get($estiloTexto , alineacion);
+    color: $color-titulo;
+    background-color: $fondo-titulo;
+    font-weight: map-get($estiloTexto , negrita);
+    font-size: 170%;
+    margin-top: 1%;
+}
+
+@media (max-width: 768px) {
+    .serviTitulo {
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 600px) {
+    .serviTitulo {
+        font-size: 140%;
+    }
+}
+
+@media (max-width: 480px) {
+    .serviTitulo {
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 320px) {
+    .serviTitulo {
+        font-size: 100%;
+    }
+}
+
+.serviTF {
+    text-align: $alineacion-centrada;
+    line-height: 1.8;
+    font-size: 110%;
+    @include paddingCostados(15%, 15%);
+}
+
+@media (max-width: 768px) {
+    .serviTF {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .serviTF {
+        font-size: 95%;
+        @include paddingCostados(5%, 5%);
+    }
+}
+
+@media (max-width: 480px) {
+    .serviTF {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .serviTF {
+        font-size: 80%;
+    }
+}
+
+.textoServ {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-top: 3%;
+    @include paddingCostados(5%, 5%);
+    font-size: 100%;
+    background-color:rgb(183, 184, 183);
+}
+
+@media (max-width: 768px) {
+    .textoServ {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoServ {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 320px) {
+    .textoServ {
+        font-size: 77%;
+    }
+}
+
+.textoG {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 125%;
+}
+
+@media (max-width: 768px) {
+    .textoG {
+        font-size: 110%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoG {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .textoG {
+        font-size: 80%;
+    }
+}
+
+.tabla {
+    margin: 0 auto;
+    background-color: rgb(241, 243, 242);
+    text-align: $alineacion-centrada;
+    table-layout: fixed;
+    width: 50%;
+    border: 2px solid;
+}
+
+@media (max-width: 768px) {
+    .tabla {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabla {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 320px) {
+    .tabla {
+        font-size: 60%;
+    }
+}
+
+.textoS {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-top: 3%;
+    @include paddingCostados(5%, 5%);
+    font-size: 100%;
+}
+
+@media (max-width: 768px) {
+    .textoS {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoS {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 320px) {
+    .textoS {
+        font-size: 77%;
+    }
+}
+
+.up {
+    margin-left: 90%;
+    text-align: end;
+    display: block;
+    color: rgb(0,0,0);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .up {
+        margin-left: 80%;
+    }
+}

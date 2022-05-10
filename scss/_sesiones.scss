@@ -1,0 +1,97 @@
+.grid-container-portafolio-infantil {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-portafolio-infantil"
+      "grid-footer-secciones";
+}
+  
+.grid-main-portafolio-infantil { 
+    grid-area: grid-main-portafolio-infantil; 
+}
+
+.grid-container-portafolio-maternal {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-portafolio-maternal"
+      "grid-footer-secciones";
+}
+  
+.grid-main-portafolio-maternal { 
+    grid-area: grid-main-portafolio-maternal;
+}
+
+.grid-container-portafolio-familiar {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-portafolio-familiar"
+      "grid-footer-secciones";
+}
+  
+.grid-main-portafolio-familiar { 
+    grid-area: grid-main-portafolio-familiar; 
+}
+
+.grid-container-portafolio-boda {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-portafolio-boda"
+      "grid-footer-secciones";
+}
+  
+.grid-main-portafolio-boda { 
+    grid-area: grid-main-portafolio-boda; 
+}
+
+.fotosSesion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .tamañoFV {
+        @include tamaño(30%, auto);
+        padding: 0.5%;
+    }
+
+    @media (max-width: 480px) {
+        .tamañoFV {
+            @include tamaño(44%, auto);
+        }
+    }
+
+    .tamañoFH {
+        @include tamaño(65%, auto);
+        padding: 0.5%;
+    }
+
+    @media (max-width: 600px) {
+        .tamañoFH {
+            @include tamaño(90%, auto);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .tamañoFH {
+            @include tamaño(88%, auto);
+        }
+    }
+}

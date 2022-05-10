@@ -1,0 +1,156 @@
+.grid-container-contacto { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-header-secciones"
+      "grid-main-contacto"
+      "grid-footer-secciones";
+}
+
+.grid-main-contacto { 
+    grid-area: grid-main-contacto; 
+}
+  
+.textoContacto {
+    text-align: map-get($estiloTexto , alineacion);
+    line-height: map-get($estiloTexto , interlineado);
+    margin-bottom: 3%;
+    font-size: 125%;
+    @include paddingCostados(5%, 5%);
+    @include marginCostados(10%, 10%);
+    
+}
+
+@media (max-width: 1024px) {
+    .textoContacto {
+        font-size: 125%;
+    }
+}
+
+@media (max-width: 768px) {
+    .textoContacto {
+        font-size: 115%;
+    }
+}
+
+@media (max-width: 600px) {
+    .textoContacto {
+        @include marginCostados(5%, 5%);
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoContacto {
+        @include marginCostados(2%, 2%);
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .textoContacto {
+        font-size: 85%;
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    text-align: $alineacion-centrada;
+    @include marginCostados(20%, 20%);
+    line-height: 1.8;
+    border: none;
+    border-radius: 1;
+    -webkit-appearance: none;
+    background-color: rgb(230, 235, 230);
+}
+
+@media (max-width: 600px) {
+    .formulario {
+        font-size: 85%;
+        @include marginCostados(10%, 10%);
+    }
+}
+
+.formulario1 {
+    padding-top: 3%;
+
+    input {
+        width: 90%;
+        outline: none;
+        border:none;
+        border-bottom: 1px solid rgb(65, 64, 64);
+        background-color: rgb(230, 235, 230);
+        color: black;
+    }
+
+    label {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .formulario1 input {
+        font-size: 90%;
+    }
+}
+
+.formulario2 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: auto;
+
+    .textoForm {
+        margin-top: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 110%;
+    }
+
+    .textarea {
+        vertical-align: center;
+        width: 90%;
+        border:none;
+        padding-left: 3%;
+        outline: none;
+    }
+}
+
+.boton {
+    background-color: rgb(230, 235, 230);
+    margin-bottom: 4%;
+
+    input {
+        background-color: rgb(149, 150, 148);
+        padding-left: 8%;
+        padding-right: 8%;
+        border: none;
+        border-radius: .5em;
+    }
+}
+
+.logoCont {
+    @include tamaño(4%, 4%);
+}
+
+@media (max-width: 862px) {
+    .logoCont {
+        @include tamaño(5%, 5%);
+    }
+}
+
+@media (max-width: 600px) {
+    .logoCont {
+        @include tamaño(6%, 6%);
+    }
+}
+
+@media (max-width: 480px) {
+    .logoCont {
+        @include tamaño(7%, 7%);
+    }
+}
