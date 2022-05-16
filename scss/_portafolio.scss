@@ -18,13 +18,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 1%;
+    width: 100%;
+    
 }
-
-@media (max-width: 600px) {
-    .portafolio {
-        margin-top: -4%;
-    }
-} 
 
 .portaTit {
     text-align: map-get($estiloTexto , alineacion);
@@ -38,42 +35,25 @@
     background-color: rgb(232, 236, 236);
     padding: 1%;
     position: relative;
+    width: 22%;
 
     img {
         @include tamaño(100%, auto);
     }
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 920px) {
     .cadaPorta {
-        @include marginCostados(7%, 7%);
+        width: 40%;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
     .cadaPorta {
-        @include marginCostados(5%, 5%);
-    }
-}
-
-@media (max-width: 895px) {
-    .cadaPorta {
-        @include marginCostados(1%, 1%);
-    }
-}
-
-@media (max-width: 600px) {
-    .cadaPorta {
-        margin-top: 6%;
+        width: 66%;
     }
 }
 
 .cadaPorta:hover {
-    transform: scale(1.2, 1.2);
-}
-
-@media (max-width: 1200px) {
-    .cadaPorta:hover {
-        transform: scale(1.01, 1.01);
-    }
+    transform: scale(1.01, 1.01);
 }

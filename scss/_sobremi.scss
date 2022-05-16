@@ -18,7 +18,7 @@
     text-align: map-get($estiloTexto , alineacion);
     line-height: map-get($estiloTexto , interlineado);
     margin-top: 1%;
-    @include paddingCostados(5%, 5%);
+    @include paddingCostados(8%, 8%);
 }
 
 @media (max-width: 768px) {
@@ -47,6 +47,6 @@
 
 .miFoto img{
     @extend.imgFijo; 
-    width: 50%;
+    @include tamaño(50%, auto);
     padding: 3%;
 }
