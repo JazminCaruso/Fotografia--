@@ -145,12 +145,12 @@
 
 @media (max-width: 600px) {
     .logoCont {
-        @include tamaño(6%, 6%);
+        @include tamaño(7%, 7%);
     }
 }
 
 @media (max-width: 480px) {
     .logoCont {
-        @include tamaño(7%, 7%);
+        @include tamaño(9%, 9%);
     }
 }

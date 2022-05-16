@@ -34,14 +34,25 @@ a {
 
 .navbar {
   background-color: #e8ecec !important; }
+  .navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; }
   .navbar .navbar-nav {
     width: 100%;
     justify-content: space-evenly; }
+    .navbar .navbar-nav .abrir {
+      outline: none; }
+      .navbar .navbar-nav .abrir:focus {
+        outline: none; }
     .navbar .navbar-nav .nav-item {
       padding-left: 2%;
       padding-right: 2%; }
       .navbar .navbar-nav .nav-item:hover {
         font-weight: bolder; }
+      .navbar .navbar-nav .nav-item:focus {
+        outline: none; }
+      .navbar .navbar-nav .nav-item .nav-link:focus {
+        outline: none; }
       .navbar .navbar-nav .nav-item .dropdown-menu {
         background-color: rgba(216, 216, 216, 0.788);
         outline: none; }
@@ -735,10 +746,10 @@ a {
 
 @media (max-width: 600px) {
   .logoCont {
-    width: 6%;
-    height: 6%; } }
+    width: 7%;
+    height: 7%; } }
 
 @media (max-width: 480px) {
   .logoCont {
-    width: 7%;
-    height: 7%; } }
+    width: 9%;
+    height: 9%; } }

@@ -32,16 +32,37 @@ a {
 
 .navbar {
     background-color: rgb(232, 236, 236) !important;
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
     
     .navbar-nav {
         width: 100%;
         justify-content: space-evenly;
+
+        .abrir {
+            outline: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
 
         .nav-item {
             @include paddingCostados(2%, 2%);
 
             &:hover {
                 font-weight: bolder;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            .nav-link:focus {
+                outline: none;
             }
 
             .dropdown-menu {
