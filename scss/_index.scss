@@ -109,7 +109,7 @@
 
 .texto {
     text-align: map-get($estiloTexto , alineacion);
-    line-height: map-get($estiloTexto , interlineado);
+    line-height: 1.2;
     margin-top: 3%;
     @include paddingCostados(5%, 5%);
 }
