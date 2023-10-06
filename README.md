@@ -10,9 +10,9 @@ Este sitio web es un portafolio en línea, una apasionada fotógrafa que captura
 
 - **Galería Fotográfica:** Explora una variedad de imágenes impresionantes en diversas categorías.
 
-- **Sobre el Fotógrafo/a:** Conoce al artista detrás de las fotos y descubre su visión y pasión por la fotografía.
+- **Sobre la Fotógrafa:** Conoce al artista detrás de las fotos y descubre su visión y pasión por la fotografía.
 
-- **Servicios:** Obtén información sobre los servicios de fotografía ofrecidos por Noe Rojo, como sesiones familiares, fotografía de eventos, y más.
+- **Servicios:** Obtén información sobre los servicios de fotografía, como sesiones familiares, fotografía de eventos, y más.
 
 ## Cómo Explorar
 
